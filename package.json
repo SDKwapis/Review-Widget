@@ -1,0 +1,26 @@
+{
+  "name": "review-widget",
+  "version": "1.0.0",
+  "description": "An API based tool that dynamically pulls Google reviews from a specific business and displays them on a page.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SDKwapis/Review-Widget.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/SDKwapis/Review-Widget/issues"
+  },
+  "homepage": "https://github.com/SDKwapis/Review-Widget#readme",
+  "dependencies": {
+    "axios": "^1.9.0",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0"
+  }
+}
