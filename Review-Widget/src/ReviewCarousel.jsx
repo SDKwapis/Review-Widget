@@ -56,32 +56,22 @@ export default function ReviewCarousel() {
   }
 
   return (
-    <div className="carousel-container">
-      <div
-        className="slides-wrapper"
-        style={{
-          width: `${chunks.length * 100}%`,
-          transform: `translateX(-${currentIdx * (100 / chunks.length)}%)`,
-        }}
-      >
-        {chunks.map((group, idx) => (
-          <div className="slide" key={idx}>
-            {group.map((r, i) => (
-              <div className="review-card" key={i}>
-                {r.photoUrl && (
-                  <img src={r.photoUrl} className="author-photo" alt={`${r.author}`} />
-                )}
-                <div className="review-content">
-                  <p className="review-text">“{r.text}”</p>
-                  <p className="review-author">— {r.author}</p>
-                  <p className="review-rating">Rating: {r.rating} / 5</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        ))}
+    <div
+  className="carousel-container"
+  style={{ '--num-chunks': chunks.length }}
+>
+  <div
+    className="slides-wrapper"
+    style={{
+      width: `${chunks.length * 100}%`,
+      transform: `translateX(-${currentIdx * (100 / chunks.length)}%)`,
+    }}
+  >
+    {chunks.map((group, idx) => (
+      <div className="slide" key={idx} style={{ width: `${100 / chunks.length}%` }}>
+        {/* … */}
       </div>
-      {/* Optional: indicators or arrows */}
-    </div>
-  );
-}
+    ))}
+  </div>
+</div>
+  )};
